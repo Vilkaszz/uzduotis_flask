@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Puslapio pavadinimas{% endblock %}</title>
+</head>
+<body>
+    <p><a href="{{ url_for('index') }}">Pradinis puslapis</a></p>
+    <p><a href="{{ url_for('oras') }}">Orų puslapis</a></p>
+    <p><a href="{{ url_for('naujienos') }}">Naujienų puslapis</a></p>
+    <p><a href="{{ url_for('login') }}">Login puslapis</a></p>
+    <p><a href="{{ url_for('pasisveikink5') }}">Pasisveikink 5 kartus</a></p>
+    {% block content %}{% endblock %}
+</body>
+</html>

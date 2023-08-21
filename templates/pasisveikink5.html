@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Pasisveikinimas 5 kartus
+{% endblock %}
+
+{% block content %}
+    <form method="post" action="{{ url_for('pasisveikink5') }}">
+        <label for="vardas">Vardas:</label>
+        <input type="text" id="vardas" name="vardas">
+        <button type="submit">Pasisveikinti</button>
+    </form>
+    {% if pasisveikinimai %}
+        <h2>Pasisveikinimai 5 kartus:</h2>
+        <ul>
+            {% for pasisveikinimas in pasisveikinimai %}
+                <li>{{ pasisveikinimas }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
